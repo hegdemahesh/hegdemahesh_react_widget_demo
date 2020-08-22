@@ -1,0 +1,9 @@
+.cardElement {
+    display: flex;
+    flex-direction: column;
+}
+
+.spacer1 {
+    height: 10x;
+    min-height: 10px;
+}

@@ -1,0 +1,61 @@
+.widgetWelcomeHolder {
+    background-color: white;
+    
+    
+}
+
+.widgetBg {
+    position: relative;
+    z-index: 30;
+}
+
+.bgImage {
+   
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 30;
+}
+
+.welcomeWidgetContent {
+    display: flex;
+    flex-direction: column;
+    z-index: 500;
+    background-color: white;
+    justify-content: stretch;   
+    align-items: stretch;
+}
+
+.hholder {
+    display: flex;
+    flex-direction: row;
+}
+
+.vholder {
+    display: flex;
+    flex-direction: column;
+}
+
+.whiteText {
+    color: white;
+}
+
+.whitebg {
+    background-color: white;
+}
+.elevatedText {
+    z-index: 500;
+}
+
+.topLabel {
+    flex-grow: 1;
+}
+
+.pointedCursor {
+    cursor: pointer;
+}
+
+.alignedText {
+    text-align: left;
+    padding: 10px;
+}
