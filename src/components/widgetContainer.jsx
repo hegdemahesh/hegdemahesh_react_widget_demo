@@ -5,9 +5,9 @@ import Fab from '@material-ui/core/Fab';
 import CloseIcon from '@material-ui/icons/Close';
 import MinimizeIcon from '@material-ui/icons/Minimize';
 import MaximizeIcon from '@material-ui/icons/Fullscreen';
-import WidgetHomeComponent from './widgetHomeComponent';
-import WidgetWelcomeComponent from './WidgetWelcomeComponent';
-import WidgetGoogleSignInComponent from './WidgetGoogleSignInComponent';
+import WidgetHomeComponent from './widgetHomeComponent.jsx';
+import WidgetWelcomeComponent from './WidgetWelcomeComponent.jsx';
+import WidgetGoogleSignInComponent from './WidgetGoogleSignInComponent.jsx';
 import './widgetContainer.css';
 
 export default class WidgetContainer extends React.Component {

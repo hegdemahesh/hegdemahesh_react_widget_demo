@@ -3,7 +3,7 @@ import './widgetHomeComponent.css';
 import hlogo from '../assets/HLogo.png';
 import plusLogo from '../assets/plusLogo.png';
 import otheLogo from '../assets/otheLogo.png';
-import SelectableCard from './selectableCard';
+import SelectableCard from './selectableCard.jsx';
 import hlogoVSmall from '../assets/HLogo_very_small.png';
 import otheLogoVSmall from '../assets/otheLogo_vsmall.png';
 import Fab from '@material-ui/core/Fab';
