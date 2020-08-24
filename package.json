@@ -1,6 +1,6 @@
 {
   "name": "hegdemahesh-react-widget-demo",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A sample react widget for exploring react fundamentals",
   "license": "MIT",
   "main": "./lib/ReactWidgetDemo.js",
