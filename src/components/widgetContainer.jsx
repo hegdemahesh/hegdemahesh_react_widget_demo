@@ -21,6 +21,7 @@ export default class WidgetContainer extends React.Component {
         this.closeClick = this.closeClick.bind(this);
         this.maximize = this.maximize.bind(this);
         this.minimize = this.minimize.bind(this);
+        this.removeElement = this.removeElement.bind(this);
     }
 
     componentDidMount() {
@@ -32,6 +33,10 @@ export default class WidgetContainer extends React.Component {
         
     }
 
+    removeElement() {
+        let container = document.getElementById('widgetHolder');
+        ReactDOM.unmountComponentAtNode(container)
+    }
 
     connectClick(){
         this.setState({ pageState: 2 } );
@@ -107,7 +112,7 @@ export default class WidgetContainer extends React.Component {
                 <div className="widgetControls">
                     {controlElement}
                     <div className='spacerh'></div>
-                    <Fab className="fabIcons" color="primary" aria-label="add">
+                    <Fab onClick={this.removeElement} className="fabIcons" color="primary" aria-label="add">
                         <CloseIcon />
                     </Fab>
                     

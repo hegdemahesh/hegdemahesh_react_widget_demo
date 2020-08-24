@@ -13025,6 +13025,7 @@ var WidgetContainer = function (_React$Component) {
         _this.closeClick = _this.closeClick.bind(_this);
         _this.maximize = _this.maximize.bind(_this);
         _this.minimize = _this.minimize.bind(_this);
+        _this.removeElement = _this.removeElement.bind(_this);
         return _this;
     }
 
@@ -13035,6 +13036,12 @@ var WidgetContainer = function (_React$Component) {
                 var pageStateInt = parseInt(sessionStorage.getItem('pageState'));
                 this.setState({ pageState: pageStateInt });
             }
+        }
+    }, {
+        key: 'removeElement',
+        value: function removeElement() {
+            var container = document.getElementById('widgetHolder');
+            ReactDOM.unmountComponentAtNode(container);
         }
     }, {
         key: 'connectClick',
@@ -13119,7 +13126,7 @@ var WidgetContainer = function (_React$Component) {
                     _react2.default.createElement('div', { className: 'spacerh' }),
                     _react2.default.createElement(
                         _Fab2.default,
-                        { className: 'fabIcons', color: 'primary', 'aria-label': 'add' },
+                        { onClick: this.removeElement, className: 'fabIcons', color: 'primary', 'aria-label': 'add' },
                         _react2.default.createElement(_Close2.default, null)
                     )
                 )
