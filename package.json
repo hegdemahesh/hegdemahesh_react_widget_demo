@@ -15,7 +15,8 @@
     "file-loader": "^6.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "rollup": "^2.26.5"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
