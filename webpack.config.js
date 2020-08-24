@@ -7,12 +7,14 @@ module.exports = {
         minimize: false
     },
     output: {
-        path: path.resolve('lib'),
+        path: path.resolve('dist'),
         filename: 'ReactWidgetDemo.js',
         library: 'ReactWidgetDemo',
+        publicPath: '/dist/',
         libraryTarget: 'window'
     },
     module: {
+        
         rules: [
             {
                 test: /\.jsx?$/,
@@ -21,10 +23,17 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                exclude: /(node_modules)/,
                 use: [
-                       'file-loader',
-                ],
+                    {
+                        loader: 'url-loader',
+                        options:{
+                            fallback: "file-loader",
+                            name: "[name][md5:hash].[ext]",
+                            outputPath: 'assets/',
+                            publicPath: '/assets/'
+                        }
+                    }
+                ]
             },
             {
                 test: /\.css$/,
@@ -33,7 +42,13 @@ module.exports = {
                        'style-loader',
                        'css-loader',
                 ],
-            }
+            },
+            
         ]
+    },
+    resolve: {
+        alias: { 
+            'assets': path.resolve(__dirname, 'assets')
+        } 
     }
 }
