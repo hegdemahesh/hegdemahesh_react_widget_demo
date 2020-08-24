@@ -3,6 +3,9 @@ var path = require('path');
 module.exports = {
     mode: 'production',
     entry: './src/components/widgetContainer.jsx',
+    optimization: {
+        minimize: false
+    },
     output: {
         path: path.resolve('lib'),
         filename: 'ReactWidgetDemo.js',
