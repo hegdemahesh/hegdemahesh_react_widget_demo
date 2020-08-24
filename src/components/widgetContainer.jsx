@@ -13,6 +13,8 @@ import './widgetContainer.css';
 export default class WidgetContainer extends React.Component {
     constructor(props) {
         super(props);
+        let that = this;
+        window.ReactWidgetElement = that;
         this.state = { pageState: 1 , viewState: 2 };
         this.connectClick = this.connectClick.bind(this);
         this.signInClicked = this.signInClicked.bind(this);

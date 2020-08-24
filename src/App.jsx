@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import './components/sampleComponent';
-import WidgetContainer from './components/widgetContainer';
+import './components/sampleComponent.jsx';
+import WidgetContainer from './components/widgetContainer.jsx';
 
 function App() {
   return (

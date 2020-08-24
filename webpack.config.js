@@ -2,14 +2,15 @@ var path = require('path');
 
 module.exports = {
     mode: 'production',
-    entry: './src/components/widgetContainer.jsx',
+    entry: './src/widgets.jsx',
     optimization: {
         minimize: false
     },
     output: {
         path: path.resolve('lib'),
         filename: 'ReactWidgetDemo.js',
-        libraryTarget: 'umd'
+        library: 'ReactWidgetDemo',
+        libraryTarget: 'window'
     },
     module: {
         rules: [
@@ -20,16 +21,18 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                     use: [
+                exclude: /(node_modules)/,
+                use: [
                        'file-loader',
-                     ],
+                ],
             },
             {
                 test: /\.css$/,
-                     use: [
+                exclude: /(node_modules)/,
+                use: [
                        'style-loader',
                        'css-loader',
-                     ],
+                ],
             }
         ]
     }
